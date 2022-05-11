@@ -1,19 +1,27 @@
-import React from 'react'
-export default class PaginaDeCarrinho extends React.Component {
+import React from "react"
+import Itens from "./Itens/Itens"
+
+export default class Carrinho extends React.Component {
     render() {
+        const itensDoCarrinho =
+            this.props.carrinho &&
+            this.props.carrinho.map((item) => {
+                return (
+                    <Itens
+                        key={item.id}
+                        quantidade={item.quantidade}
+                        nome={item.name}
+                        onClick={() => this.props.removerItemDoCarrinho(item)}
+                    />
+                );
+            });
+
         return (
-            <>
-                <section>
-                    <h1>Dados da compra</h1>
-                    <p>Preço total: </p>
-                    <button onClick={() => this.props.changePage("list-page")}>Voltar para lista de serviços</button>
-                    <button type="submit">Finalizar compra</button>
-                </section>
-                <hr />
-                <section>
-                    <h1>Carrinho</h1>
-                </section>
-            </>
-        )
+            <ConjuntoDoCarrinho>
+                <h2>Carrinho:</h2>
+                <div>{itensDoCarrinho}</div>
+                <p>Valor total: R$ {this.props.valorTotal},00</p>
+            </ConjuntoDoCarrinho>
+        );
     }
 }
