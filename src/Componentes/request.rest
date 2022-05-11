@@ -1,0 +1,78 @@
+POST https://labeninjas.herokuapp.com/auth
+Content-Type: application/json
+
+{"name":"labe-ninja2-projeto-a-b-c"}
+
+{ "key": "efb47975-83d5-4e22-84a5-dd8b35d906f7" }
+
+###
+
+GET https://labeninjas.herokuapp.com/jobs
+Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
+
+###
+
+POST https://labeninjas.herokuapp.com/jobs
+Content-Type: application/json
+Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
+
+{"title": "encanador", "description":"Arrumar e fazer novo encanamento","price":100,"paymentMethods":["cartão de crédito", "Cartão de débito", "pix"],"dueDate":"2022-05-30"}
+
+###
+
+
+POST https://labeninjas.herokuapp.com/jobs
+Content-Type: application/json
+Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
+
+{"title": "eletricista", "description": "Arrumar a elétrica de um local ou fazer uma nova instalação residencial ou comercial.", "price":200,"paymentMethods":["cartão de crédito", "Cartão de débito", "pix"],"dueDate":"2022-05-30"}
+
+###
+
+
+POST https://labeninjas.herokuapp.com/jobs
+Content-Type: application/json
+Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
+
+{"title": "segurança-armada", "description": "vigiar seu património residencial/comercial, público/privado, escolta armada de bens e valores.", "price":500,"paymentMethods":["cartão de crédito", "Cartão de débito", "pix"],"dueDate":"2022-05-30"}
+
+###
+
+POST https://labeninjas.herokuapp.com/jobs
+Content-Type: application/json
+Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
+
+{"title": "jardineiro", "description": "Cortar,aparar grama, podar árvores etc.", "price":150,"paymentMethods":["cartão de crédito", "Cartão de débito", "pix"],"dueDate":"2022-05-30"}
+
+###
+
+GET Job By Id 
+{https://labeninjas.herokuapp.com/jobs/:id}
+Content-Type: application/json
+Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
+params:
+
+id: 
+
+###
+
+POST-Update Job 
+{https://labeninjas.herokuapp.com/jobs/:id}
+Content-Type: application/json
+Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
+
+params:
+
+id: 
+
+###
+
+DELETE 
+{https://labeninjas.herokuapp.com/jobs/:id}
+Content-Type: application/json
+Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
+
+params:
+
+id:
+
