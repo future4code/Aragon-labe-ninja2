@@ -20,7 +20,6 @@ Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
 
 ###
 
-
 POST https://labeninjas.herokuapp.com/jobs
 Content-Type: application/json
 Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
@@ -28,7 +27,6 @@ Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
 {"title": "eletricista", "description": "Arrumar a elétrica de um local ou fazer uma nova instalação residencial ou comercial.", "price":200,"paymentMethods":["cartão de crédito", "Cartão de débito", "pix"],"dueDate":"2022-05-30"}
 
 ###
-
 
 POST https://labeninjas.herokuapp.com/jobs
 Content-Type: application/json
@@ -46,33 +44,20 @@ Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
 
 ###
 
-GET Job By Id 
-{https://labeninjas.herokuapp.com/jobs/:id}
+GET https://labeninjas.herokuapp.com/jobs/3c7ab730-2a9a-4f5f-8df0-bf637c7e3595
 Content-Type: application/json
 Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
-params:
-
-id: 
 
 ###
 
-POST-Update Job 
-{https://labeninjas.herokuapp.com/jobs/:id}
+POST https://labeninjas.herokuapp.com/jobs/3c7ab730-2a9a-4f5f-8df0-bf637c7e3595
 Content-Type: application/json
 Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
 
-params:
-
-id: 
+{"taken": true}
 
 ###
 
-DELETE 
-{https://labeninjas.herokuapp.com/jobs/:id}
+DELETE https://labeninjas.herokuapp.com/jobs/
 Content-Type: application/json
 Authorization: efb47975-83d5-4e22-84a5-dd8b35d906f7
-
-params:
-
-id:
-
