@@ -1,5 +1,5 @@
 import React from "react"
-import Itens from "./Itens/Itens"
+import Itens from "./Itens.js"
 
 export default class Carrinho extends React.Component {
     render() {
@@ -17,11 +17,11 @@ export default class Carrinho extends React.Component {
             });
 
         return (
-            <ConjuntoDoCarrinho>
+            <section>
                 <h2>Carrinho:</h2>
-                <div>{itensDoCarrinho}</div>
+                <section>{itensDoCarrinho}</section>
                 <p>Valor total: R$ {this.props.valorTotal},00</p>
-            </ConjuntoDoCarrinho>
+            </section>
         );
     }
 }
