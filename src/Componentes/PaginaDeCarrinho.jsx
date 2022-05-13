@@ -1,5 +1,5 @@
 import React from "react"
-import Itens from "./Itens.js"
+import Itens from "./Itens.jsx"
 
 export default class Carrinho extends React.Component {
     render() {

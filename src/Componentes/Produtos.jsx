@@ -1,5 +1,5 @@
 import React from "react";
-import CartaoDosProdutos from "./CartaoDosProdutos";
+import CartaoDosProdutos from "./CartaoDosProdutos.jsx";
 import axios from "axios"
 
 export default class Produtos extends React.Component {
